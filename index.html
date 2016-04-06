@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>  
+
+<head> 
+<script src="angular.min.js"> </script>
+<script src="skrypt.js"> </script>
+<meta charset="UTF-8"> 
+
+<title>tytuł strony dla wyszukiwarek</title>  
+
+</head>  
+
+<body ng-app="wyk1" ng-controller="myCtrl"> 
+	<p>Przedstaw się:
+	<input type="text" ng-model="model"> </p>
+	Cześć {{model}}
+	<p>___________________________</p>
+	<p> Filtruj <input type="text" ng-model="find"> </p>
+	
+	<ul>
+		<li ng-repeat="a in array| filter: find">{{a}}</li>
+		
+	</ul>
+
+</body>  
+
+</html>
